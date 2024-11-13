@@ -44,6 +44,7 @@ export default function Create({ onBack }: CreateProps) {
     initialValues: initialValue,
     onSubmit: async (values) => {
       const accessToken = getCookie("accessToken");
+      console.log(values,"valuess es ari")
       try {
         const response = await axios.post(
           "http://localhost:3001/invoice",
@@ -54,6 +55,7 @@ export default function Create({ onBack }: CreateProps) {
             },
           }
         );
+        console.log("Invoice created:", response.data);
       } catch (error) {
         console.log(error);
       }
@@ -61,7 +63,12 @@ export default function Create({ onBack }: CreateProps) {
 
     validationSchema: CreatevalidationSchema,
   });
+
+
+  // console.log(formik.values.items, "current");
+
   const { handleBlur, handleChange, handleSubmit, values, errors } = formik;
+
   return (
     <>
     <div className="absolute flex flex-col backdrop-blur-md- md:bg-gray-500 md:bg-opacity-[0.8] w-full overflow-y-scroll  z-20 ">
@@ -332,6 +339,7 @@ export default function Create({ onBack }: CreateProps) {
                                Item Name
                              </p>
                              <Field
+                              //  type="text"
                                name={`items.${index}.name`}
                                placeholder="Enter item name..."
                                className="w-[100%] h-[48px] pl-[20px] rounded-[4px] border-[1px] border-[#DFE3FA] border-solid bg-white dark:bg-[#1E2139] dark:border-[#252945] dark:text-[white]"
