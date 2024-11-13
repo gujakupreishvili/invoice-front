@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "preserve", // აქ შევცვალეთ preserve-ს react-jsx-ზე
     "incremental": true,
     "plugins": [
       {

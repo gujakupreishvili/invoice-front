@@ -191,7 +191,7 @@ export default function Invoice({
                       {invoiceData.status}
                     </button>
                   </div>
-                  <div className="hidden  md:gap-[8px] md:flex ">
+                  <div className="hidden  md:gap-[8px] md:flex md:justify-between ">
                     <button
                       className="bg-[#F9FAFE] w-[73px] rounded-[24px] h-[48px] text-[#7E88C3] font-bold text-[15px] dark:bg-[#252945] dark:text-[#DFE3FA]"
                       onClick={() => handleUpdate(true)}
@@ -199,7 +199,7 @@ export default function Invoice({
                       Edit
                     </button>
                     <button
-                      className="bg-[#EC5757] w-[89] rounded-[24px] h-[48px] text-[white] font-bold text-[15px]"
+                      className="bg-[#EC5757] w-[89px] rounded-[24px] h-[48px] text-[white] font-bold text-[15px]"
                       onClick={() => DeleteInvoice(invoiceId)}
                     >
                       Delete
@@ -340,7 +340,7 @@ export default function Invoice({
               Edit
             </button>
             <button
-              className="bg-[#EC5757] w-[89] rounded-[24px] h-[48px] text-[white] font-bold text-[15px]"
+              className="bg-[#EC5757] w-[89px] rounded-[24px] h-[48px] text-[white] font-bold text-[15px]"
               onClick={() => DeleteInvoice(invoiceId)}
             >
               Delete
